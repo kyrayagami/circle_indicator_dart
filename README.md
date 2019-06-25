@@ -1,3 +1,6 @@
+# This repo is clone for  https://github.com/long1eu/circle_indicator
+# updated for flutter >=1.20.1 <3.0.0 
+
 # circle_indicator
 
 A library for Dart developers. It is awesome.
@@ -11,12 +14,12 @@ Add this to your package's pubspec.yaml file:
 
        dependencies:
          circle_indicator: "^0.0.7"
-         
+
 2. Install it
 You can install packages from the command line:
 
        $ pub get
-       
+
 Alternatively, your editor might support 'pub get'. Check the docs for your editor to learn more.
 
 3. Import it
@@ -30,9 +33,9 @@ Now in your Dart code, you can use:
 ## Usage
 
 A simple usage example for the CircleIndicator:
-    
+
     final PageController controller = new PageController();
-    
+
     @override
       Widget build(BuildContext context) {
         return new Scaffold(
@@ -54,7 +57,7 @@ A simple usage example for the CircleIndicator:
                       top: 16.0,
                       bottom: 16.0,
                     ),
-                    child: new CircleIndicator(controller, pageList.length, 
+                    child: new CircleIndicator(controller, pageList.length,
                       3.0, Colors.white70, Colors.white)
                     ),
                   ),
@@ -63,11 +66,11 @@ A simple usage example for the CircleIndicator:
           ),
         );
       }
-      
+
 If you want to use the whole IntroductionWidget you can do it like so:
 
     class StartPage extends StatelessWidget {
-    
+
       @override
       Widget build(BuildContext context) {
         var pageList = <StartPageItem>[
@@ -80,7 +83,7 @@ If you want to use the whole IntroductionWidget you can do it like so:
           new StartPageItem("assets/ic_info_07.png"),
           new StartPageItem("assets/ic_info_08.png"),
         ];
-    
+
         return new Scaffold(
           body: new IntroductionWidget(
             pageList: pageList,
@@ -99,13 +102,13 @@ If you want to use the whole IntroductionWidget you can do it like so:
           ),
         );
       }
-    
-    
+
+
       void startApp(BuildContext context) {
         Navigator.popAndPushNamed(context, HomePage.routeName);
       }
     }
-    
+
 You can add both left and right actions:
 
       return new Scaffold(
@@ -124,7 +127,7 @@ You can add both left and right actions:
                 .copyWith(
               color: Colors.white,),
           ),
-  
+
           leftAction: () => startApp(context),
           ///called every time the page changes with the page number
           showLeft: (page) => true,
